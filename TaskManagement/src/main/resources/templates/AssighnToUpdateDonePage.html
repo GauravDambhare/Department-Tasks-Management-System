@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Assignee Update Successful</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    .message {
+      text-align: center;
+      color: green;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .error-message {
+      text-align: center;
+      color: red;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .buttons-container {
+      display: flex;
+      justify-content: center;
+    }
+    button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 5px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #3e8e41; /* Darker green */
+    }
+    .patent-template {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 12px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <div th:if="${Message}" th:text="${Message}" class="message"></div>
+  <div th:if="${ErrorMessage}" th:text="${ErrorMessage}" class="error-message"></div>
+  <div class="buttons-container">
+    <a href="#" th:href="@{/showHomePage}">
+      <button>Go to Home Page</button>
+    </a>
+    <a href="#" th:href="@{/showupdateAsighntoPage}">
+      <button>Update More Assignees</button>
+    </a>
+  </div>
+  <div class="patent-template">Application created by gauravdambhare10@gmail.com</div>
+</body>
+</html>

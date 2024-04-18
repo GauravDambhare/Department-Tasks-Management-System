@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task Management App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f5f5f5;
+      position: relative; /* Make the body a positioning context */
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .button-container {
+      display: flex; /* Use flexbox for two columns */
+      justify-content: center; /* Center buttons horizontally */
+    }
+    button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 5px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #3e8e41; /* Darker green */
+    }
+    .patent-container {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 12px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hello! Welcome to the Task Management App</h1>
+  <div class="button-container">
+    <button onclick="window.location.href='/showCreatePage'">Create Task</button>
+    <button onclick="window.location.href='/showDeleteTaskPage'">Delete Task</button>
+    <button onclick="window.location.href='/showAllTasks'">Show All Tasks</button>
+    <button onclick="window.location.href='/showupdateStatusPage'" >Update Status</button>
+    <button onclick="window.location.href='/showupdateAsighntoPage'">Update Assigned To</button>
+    <button onclick="window.location.href='/showupdateRatingPage'">Update Rating</button>
+  </div>
+  <div class="button-container">
+    <button onclick="window.location.href='/showupdateDeadLinePage'">Update Deadline</button>
+    <button onclick="window.location.href='/showGetTaskByRatingsPage'">Get Tasks by Rating</button>
+    <button onclick="window.location.href='/showGetTaskByDeadLinePage'">Get Tasks by Deadline</button>
+    <button onclick="window.location.href='/showGetTaskByStatusPage'">Get Tasks by Status</button>
+    <button onclick="window.location.href='/showGetTaskByAsighneePage'">Get Tasks by Assigned Person</button>
+  </div>
+  <div class="patent-container">Application created by gauravdambhare10@gmail.com</div>
+</body>
+</html>

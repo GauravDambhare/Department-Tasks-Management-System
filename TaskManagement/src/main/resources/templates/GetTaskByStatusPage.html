@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task Management App - Get Tasks by Status</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      margin: 0 auto;
+    }
+    label {
+      margin-bottom: 5px;
+      display: block;
+    }
+    select {
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      width: 150px; /* Adjust width as needed */
+    }
+    input[type="submit"] {
+      background-color: #4CAF50; /* Light blue */
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Get Tasks by Status</h2>
+  <form action="/getTaskByStatus" method="post">
+    <label for="status">Select Status:</label>
+    <select id="status" name="status" required>
+      <option value="">-- Select Status --</option>
+      <option value="Pending">Pending</option>
+      <option value="In Progress">In Progress</option>
+      <option value="Completed">Completed</option>
+    </select>
+    <br>
+    <input type="submit" value="Get Tasks">
+  </form>
+</body>
+</html>

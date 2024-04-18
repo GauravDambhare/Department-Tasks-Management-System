@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task Management App - Update Task</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      margin: 0 auto;
+    }
+    label {
+      margin-bottom: 5px;
+      display: block;
+    }
+    input[type="text"], input[type="submit"] {
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    input[type="submit"] {
+      background-color: #4CAF50; /* Light blue */
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Update Task Status</h2>
+  <form action="/updateStatus" method="post">
+    <label for="taskId">Task ID:</label>
+    <input type="text" id="taskId" name="taskId" required>
+    <label for="status">New Status:</label>
+    <input type="text" id="status" name="status" required>
+    <br>
+    <input type="submit" value="Update Task">
+  </form>
+</body>
+</html>

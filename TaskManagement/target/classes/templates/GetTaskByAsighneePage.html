@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task Management App - Get Tasks by Assignee</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      position: relative; /* Added position relative */
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      margin: 0 auto;
+    }
+    label {
+      margin-bottom: 5px;
+      display: block;
+    }
+    input[type="text"],
+    input[type="submit"] {
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    input[type="text"] {
+      width: 150px;
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    .patent-template {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 12px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <h2>Get Tasks by Assignee</h2>
+  <form action="/getTaskByAssingsPerson" method="post">
+    <label for="assigneeName">Enter Assignee Name:</label>
+    <input type="text" id="assigneeName" name="assigneeName" required>
+    <br>
+    <input type="submit" value="Get Tasks">
+  </form>
+  <div class="patent-template">Application created by gauravdambhare10@gmail.com</div> <!-- Added patent template -->
+</body>
+</html>

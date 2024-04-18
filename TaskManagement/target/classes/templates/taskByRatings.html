@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task Management App - All Tasks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background-color: #f5f5f5;
+    }
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+    tr:nth-child(even) { /* Even rows */
+      background-color: #e0e0e0;
+    }
+    th {
+      background-color: #4CAF50; /* Light blue */
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>All Tasks</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Task ID</th>
+        <th>Description</th>
+        <th>Deadline (in hours)</th>
+        <th>Star Rating</th>
+        <th>Status</th>
+        <th>Assigned To</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr th:each="task : ${tasks}">
+        <td th:text="${task.taskId}"></td>
+        <td th:text="${task.discription}"></td>
+        <td th:text="${task.deadLineInHours}"></td>
+        <td th:text="${task.starRating}"></td>
+        <td th:text="${task.status}"></td>
+        <td th:text="${task.assighnTo}"></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

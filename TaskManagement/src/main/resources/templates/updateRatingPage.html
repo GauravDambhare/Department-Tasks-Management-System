@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task Management App - Rate Task</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      margin: 0 auto;
+    }
+    label {
+      margin-bottom: 5px;
+      display: block;
+    }
+    input[type="text"], input[type="number"], input[type="submit"] {
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    input[type="number"] { /* Styling for rating input */
+      width: 50px; /* Adjust width as needed */
+    }
+    input[type="submit"] {
+      background-color: #4CAF50; /* Light blue */
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Rate Task</h2>
+  <form action="/updateRating" method="post">
+    <label for="taskId">Task ID:</label>
+    <input type="text" id="taskId" name="taskId" required>
+    <label for="rating">Rating (1-5):</label>
+    <input type="number" id="rating" name="rating" min="1" max="5" required>
+    <br>
+    <input type="submit" value="Rate Task">
+  </form>
+</body>
+</html>
